@@ -1,11 +1,11 @@
 
 data "aws_ssm_parameter" "public_subnet_ids" {
-  name = "/${local.common_name_suffix}/public_subnet_id"
+  name = "/${local.common_name_suffix}/public_subnet_ids"
 }
 
 
 data "aws_ssm_parameter" "sg_id" {
-  name = "/${local.common_name_suffix}/${component}"
+  name = "/${local.common_name_suffix}/${var.component}"
 }
 
 data "aws_ssm_parameter" "vpc_id" {
