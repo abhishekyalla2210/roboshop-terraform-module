@@ -1,7 +1,7 @@
   
 resource "aws_instance" "main" {
     ami = var.ami_id
-    subnet_id   = local.subnet_id
+    subnet_id   = [local.subnet_id]
     instance_type = var.instance_type
     vpc_security_group_ids = [local.sg_id]
      tags = merge(
