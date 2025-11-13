@@ -22,7 +22,7 @@ locals {
 }
 
 locals {
-  tg_port = "${var.component}" == "frontend" ? 443 : 8080
+  tg_port = "${var.component}" == "frontend" ? 80 : 8080
   health_check_path = "${var.component}" == "frontend" ? "/" : "/health"
 }
 
