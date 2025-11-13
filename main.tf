@@ -56,7 +56,7 @@ resource "aws_ami_from_instance" "main" {
 
 resource "aws_lb_target_group" "main" {
   name     = "${local.common_name_suffix}-${var.component}"
-  port     = 8080
+  port     = local.tg_port
   protocol = "HTTP"
   vpc_id   =  local.vpc_id
   deregistration_delay = 60
