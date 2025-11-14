@@ -22,11 +22,12 @@ variable "instance_type" {
     default = "t3.micro"
 }
 
-variable "priority" {
+variable "rule_priority" {
 
   
 }
 variable "domain_name" {
+    default = "abhishekdev.fun"
     
   
 }
