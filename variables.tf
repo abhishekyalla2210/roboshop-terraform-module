@@ -1,7 +1,5 @@
 
-variable "ami_id" {
- 
-}
+
 
 variable "component" {
   
@@ -31,3 +29,4 @@ variable "domain_name" {
     
   
 }
+

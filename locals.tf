@@ -13,7 +13,7 @@ locals {
  host_header =  "${var.component}" == "frontend" ? "${var.project_name}-${var.environment}.${var.domain_name}" : "${var.component}.backend-alb-${var.environment}.${var.domain_name}"
   tg_port = "${var.component}" == "frontend" ? 80 : 8080
   health_check_path = "${var.component}" == "frontend" ? "/" : "/health"
-
+ami_id = data.aws_ami.ami_id.id
 }
 
 locals {

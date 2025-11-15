@@ -36,3 +36,12 @@ data "aws_ssm_parameter" "backend_alb_listener_arn" {
 
 
 
+data "aws_ami" "ami_id" {
+  most_recent = true
+  owners      = ["112108975903"]  # because it’s your AMI
+  filter {
+    name   = "name"
+    values = ["RHEL-9-DevOps-Practice"]
+  }
+}
+
